@@ -1,0 +1,242 @@
+Hero Section Styles
+.hero-wrapper {
+    color: white;
+    position: relative;
+    padding: 5rem 2rem;
+    overflow: hidden;
+}
+
+.hero-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    animation: pulse 15s infinite;
+    z-index: -1;
+}
+
+/* Hero Container */
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero Title Section */
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.hero-title h1 {
+    font-weight: 600;
+    font-size: 3.8rem;
+    line-height: 4rem;
+    color: #ffffff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Hero Description */
+.hero-des {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    text-align: left;
+    gap: 1rem;  /* Adds space between text elements */
+    max-width: 800px; /* Limit the width of the text to improve readability */
+    margin: 0 auto; /* Centers the content horizontally */
+    padding: 0 2rem; /* Adds padding to ensure the text doesn’t touch the edges */
+}
+
+.secondaryText {
+    font-size: 1.4rem;
+    color: #f9f9f9; /* Adjust to match your theme */
+    font-weight: 600;
+    margin-bottom: 1rem; /* Adds space below the secondary text */
+}
+
+.hero-des span {
+    font-size: 1.1rem;
+    color: #d1d1d1;
+    line-height: 1.6;
+}
+
+/* Search Bar */
+.search-bar {
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid rgba(120, 120, 120, 0.374);
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin-top: 1rem;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.search-bar:hover {
+    border-color: rgba(120, 120, 120, 0.5);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    padding: 0.5rem;
+}
+
+.search-bar button {
+    background-color: rgb(234, 132, 7);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: rgb(200, 110, 6);
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem; /* Increased font size for better visibility */
+    font-weight: bold;
+    color: #f9f9f9;
+    position: relative;
+}
+
+.stat-number span.plus {
+    color: rgb(234, 132, 7);  /* Orange color for the plus sign */
+}
+
+.stat-label {
+    font-size: 1.2rem;  /* Adjusted size for better readability */
+    color: #d1d1d1;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 500;  /* Slightly bold for emphasis */
+}
+.stat>:nth-child(1)>:last-child{
+    color: orange;
+}
+
+
+/* Image Container */
+.image-container {
+    width: 30rem;
+    height: 35rem;
+    position: relative;
+    border-radius: 15rem 15rem 0 0;
+    overflow: hidden;
+    border: 8px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 0 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25), 0 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .image-container {
+        width: 25rem;
+        height: 30rem;
+    }
+
+    .hero-title h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    .search-bar {
+        max-width: 300px;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-wrapper {
+        padding: 3rem 1rem;
+    }
+
+    .image-container {
+        width: 20rem;
+        height: 25rem;
+    }
+
+    .search-bar {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-wrapper {
+        padding: 2rem 1rem;
+    }
+
+    .image-container {
+        width: 15rem;
+        height: 20rem;
+    }
+
+    .hero-title h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .search-bar {
+        max-width: 250px;
+    }
+}
