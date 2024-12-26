@@ -1,0 +1,108 @@
+/* Wrapper for the entire section */
+.r-wrapper {
+  padding: 4rem 0;
+  background-color: #f9f9f9; /* Light background */
+}
+
+/* Card container */
+.r-container {
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card */
+.r-card {
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 18rem;
+  margin: auto;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 300ms ease;
+  position: relative;
+}
+
+/* Hover effect for card */
+.r-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  border-color: #481708;
+}
+
+/* Image inside the card */
+.r-card > img {
+  width: 100%;
+  max-width: 15rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: transform 300ms ease, filter 300ms ease;
+}
+
+/* Hover effect for image */
+.r-card:hover > img {
+  transform: scale(1.05);
+  filter: brightness(95%);
+}
+
+/* Title inside the card */
+.r-card > .r-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 0.5rem;
+  transition: color 300ms ease;
+}
+
+/* Hover effect for title */
+.r-card:hover > .r-title {
+  color: #ff7b54;
+}
+
+/* Details text */
+.r-card > .r-detail {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  transition: color 300ms ease;
+}
+
+/* Hover effect for detail */
+.r-card:hover > .r-detail {
+  color: #444444;
+}
+
+/* Price text */
+.r-card > .r-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ff440a; /* Highlighted price */
+  margin-top: auto;
+  transition: color 300ms ease;
+}
+
+/* Card Button */
+.r-card > .r-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #ff7b54;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 300ms ease, transform 200ms ease;
+}
+
+/* Hover effect for button */
+.r-card > .r-button:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
