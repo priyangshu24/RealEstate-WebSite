@@ -1,108 +1,327 @@
-/* Wrapper for the entire section */
+/* Main wrapper styles */
 .r-wrapper {
+  background: linear-gradient(180deg, rgba(245,247,250,1) 0%, rgba(255,255,255,1) 100%);
   padding: 4rem 0;
-  background-color: #f9f9f9; /* Light background */
-}
-
-/* Card container */
-.r-container {
-  gap: 2rem;
   position: relative;
   overflow: hidden;
 }
 
-/* Card */
-.r-card {
-  gap: 1rem;
-  padding: 1.5rem;
-  border-radius: 12px;
-  max-width: 18rem;
+/* Container styles */
+.innerWidth {
+  max-width: 1280px;
   margin: auto;
-  background-color: #fdfdfd;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: all 300ms ease;
-  position: relative;
 }
 
-/* Hover effect for card */
-.r-card:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  transform: translateY(-5px);
-  border-color: #481708;
+.paddings {
+  padding: 1.5rem;
 }
 
-/* Image inside the card */
-.r-card > img {
-  width: 100%;
-  max-width: 15rem;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  transition: transform 300ms ease, filter 300ms ease;
+/* Header section styles */
+.r-head {
+  margin-bottom: 3rem;
 }
 
-/* Hover effect for image */
-.r-card:hover > img {
-  transform: scale(1.05);
-  filter: brightness(95%);
-}
-
-/* Title inside the card */
-.r-card > .r-title {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #333333;
-  margin-bottom: 0.5rem;
-  transition: color 300ms ease;
-}
-
-/* Hover effect for title */
-.r-card:hover > .r-title {
-  color: #ff7b54;
-}
-
-/* Details text */
-.r-card > .r-detail {
-  font-size: 1rem;
-  color: #555555;
-  line-height: 1.4;
-  margin-bottom: 1rem;
-  transition: color 300ms ease;
-}
-
-/* Hover effect for detail */
-.r-card:hover > .r-detail {
-  color: #444444;
-}
-
-/* Price text */
-.r-card > .r-price {
+.orangeText {
+  color: #ff6b2b;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #ff440a; /* Highlighted price */
-  margin-top: auto;
-  transition: color 300ms ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
 }
 
-/* Card Button */
-.r-card > .r-button {
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ffffff;
-  background-color: #ff7b54;
-  border: none;
-  border-radius: 8px;
+.primaryText {
+  color: #1f3e72;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.secondaryText {
+  color: #8c8b8b;
+  font-size: 0.9rem;
+}
+
+/* Swiper styles */
+.swiper {
+  padding: 2rem 0 3rem 0;
+}
+
+.swiper-slide {
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* Navigation arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #1f3e72;
+  background: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #1f3e72;
+  color: white;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 1.2rem;
+}
+
+/* Pagination dots */
+.swiper-pagination-bullet {
+  background: #1f3e72;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #1f3e72;
+  opacity: 1;
+}
+
+/* Card styles */
+.r-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
   cursor: pointer;
-  transition: background-color 300ms ease, transform 200ms ease;
 }
 
-/* Hover effect for button */
-.r-card > .r-button:hover {
-  background-color: #e64a19;
+/* Mouse tracking glow effect */
+.r-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 107, 43, 0.1),
+    transparent 40%
+  );
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.r-card:hover::before {
+  opacity: 1;
+}
+
+.r-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Image styles */
+.r-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.r-card:hover .r-image {
+  transform: scale(1.03);
+}
+
+/* Card details */
+.r-details {
+  padding: 0.5rem;
+}
+
+.r-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.r-detail {
+  display: block;
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.r-price {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #ff6b2b;
+  font-size: 1.2rem;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .primaryText {
+    font-size: 2rem;
+  }
+  
+  .r-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .r-wrapper {
+    padding: 2rem 0;
+  }
+  
+  .r-head {
+    margin-bottom: 2rem;
+  }
+  
+  .orangeText {
+    font-size: 1rem;
+  }
+  
+  .primaryText {
+    font-size: 1.5rem;
+  }
+  
+  .r-image {
+    height: 180px;
+  }
+}
+
+/* Flex utilities */
+.flexColStart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Card text styles */
+.r-details {
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.r-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f3e72;
+  margin-bottom: 0.75rem;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.r-card:hover .r-title {
+  color: #ff6b2b;
+}
+
+.r-detail {
+  display: block;
+  margin: 0.75rem 0;
+  line-height: 1.6;
+  color: #666;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.r-price {
+  display: block;
+  margin-top: 1.25rem;
+  font-weight: 700;
+  color: #ff6b2b;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.r-card:hover .r-price {
   transform: scale(1.05);
+}
+
+/* Enhanced card hover effects */
+.r-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.r-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 107, 43, 0.1) 0%,
+    rgba(31, 62, 114, 0.1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.r-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.r-card:hover::after {
+  opacity: 1;
+}
+
+/* Smooth image zoom effect */
+.r-image-container {
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.r-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.r-card:hover .r-image {
+  transform: scale(1.08);
+}
+
+@media (max-width: 1024px) {
+  .r-title {
+    font-size: 1.3rem;
+  }
+  
+  .r-detail {
+    font-size: 0.9rem;
+  }
+  
+  .r-price {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .r-details {
+    padding: 0.75rem;
+  }
+  
+  .r-title {
+    font-size: 1.1rem;
+  }
+  
+  .r-detail {
+    font-size: 0.85rem;
+    margin: 0.5rem 0;
+  }
 }

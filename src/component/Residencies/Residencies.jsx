@@ -49,12 +49,14 @@ const Residencies = () => {
 
         {/* Swiper Section */}
         <Swiper
+          {...sliderSettings}
           spaceBetween={20}
           slidesPerView={1}
           breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            480: { slidesPerView: 1 },
+            600: { slidesPerView: 2 },
+            750:{ slidesPerView: 3 },
+            1100: { slidesPerView: 4 },
           }}
           modules={[Navigation, Pagination]} // Add the necessary modules
           navigation // Enable navigation arrows
