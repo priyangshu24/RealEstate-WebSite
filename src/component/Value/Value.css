@@ -17,7 +17,6 @@
 /* Image container styles */
 .v-container .image-container {
     border: 8px solid rgba(232, 232, 232, 0.93);
-    border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
 }

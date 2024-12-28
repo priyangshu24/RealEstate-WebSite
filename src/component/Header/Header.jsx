@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import './Header.css'
+import { TiThMenu } from "react-icons/ti";
 
 function Header() {
   return (
@@ -20,8 +21,9 @@ function Header() {
           <button className="button">
             <a href="">Conactact</a>
           </button>
-
         </div>
+      </div>
+      <div className='menu-icon'>
       </div>
     </section>
   )

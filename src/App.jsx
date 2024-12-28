@@ -5,7 +5,9 @@ import Residencies from "./component/Residencies/Residencies";
 import "./component/Value/Value";
 import "./App.css"
 import Value from "./component/Value/Value";
-
+import Contact from "./component/Contact/Contact";
+import GetStarted from "./component/GetStarted/GetStarted";
+import Footer from "./component/Footer/Footer";
 function App() {
   return (
       <div className="App">
@@ -17,6 +19,9 @@ function App() {
         <Companies /> 
         <Residencies /> 
         <Value/>
+        <Contact />
+        <GetStarted />
+        <Footer />
       </div>
   )
 }
