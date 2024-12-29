@@ -1689,6 +1689,11 @@ react-countup@^6.5.3:
   dependencies:
     countup.js "^2.8.0"
 
+react-dimmer@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/react-dimmer/-/react-dimmer-1.0.7.tgz"
+  integrity sha512-WgS19MiBA/geVpy/PHhhmcoujP1/OJ4v5M/nwpaQZq8cytt9dHHLxNk+xCgVefS0SKRKnNpY45BpvUcsZpsxfw==
+
 "react-dom@^16.3.3 || ^17.0.0 || ^18.0.0", react-dom@^18.3.1:
   version "18.3.1"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz"
@@ -1712,7 +1717,7 @@ react-refresh@^0.14.2:
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.14.2.tgz"
   integrity sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==
 
-react@*, "react@^16.3.2 || ^17.0.0 || ^18.0.0", "react@^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0", react@^18.3.1, "react@>= 16.3.0":
+react@*, "react@^16.3.2 || ^17.0.0 || ^18.0.0", "react@^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0", react@^18.3.1, "react@>= 16.3.0", react@>=16:
   version "18.3.1"
   resolved "https://registry.npmjs.org/react/-/react-18.3.1.tgz"
   integrity sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==

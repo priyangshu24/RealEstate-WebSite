@@ -2,7 +2,7 @@ Hero Section Styles
 .hero-wrapper {
     color: white;
     position: relative;
-    padding: 5rem 2rem;
+    padding: 7rem 2rem 5rem 2rem;;
     overflow: hidden;
 }
 
@@ -208,7 +208,7 @@ Hero Section Styles
 
 @media (max-width: 768px) {
     .hero-wrapper {
-        padding: 3rem 1rem;
+        padding-top: 5rem;
     }
 
     .image-container {
